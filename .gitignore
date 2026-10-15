@@ -1,0 +1,14 @@
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.idea/
+*.iml
+.DS_Store
+android/.gradle/
+android/local.properties
+android/**/GeneratedPluginRegistrant.java
+android/app/.cxx/
+screenshots_out/
+coverage/

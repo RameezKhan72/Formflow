@@ -1,0 +1,57 @@
+name: Check
+
+# Lean check: static analysis + unit/widget tests only (no APK, no emulator).
+# Runs only when started by hand (Actions > Check > Run workflow) or with
+#   gh workflow run ci.yml
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: check
+  cancel-in-progress: true
+
+jobs:
+  analyze-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - name: Flutter version
+        run: flutter --version | tee flutter_version.txt
+      - name: Generate the iOS folder if missing
+        run: |
+          if [ ! -f ios/Runner/Info.plist ]; then
+            flutter create --project-name formflow --org com.formflow --platforms ios /tmp/ffios
+            cp -r /tmp/ffios/ios ./ios
+            python3 tool/patch_ios.py
+            pip install --quiet pillow numpy && python3 tool/make_logo.py
+            echo "IOS_GENERATED=1" >> "$GITHUB_ENV"
+          fi
+      - run: flutter pub get
+      - name: Analyze
+        run: |
+          set -o pipefail
+          flutter analyze --no-fatal-infos 2>&1 | tee analyze_report.txt
+      - name: Unit and widget tests
+        if: always()
+        run: |
+          set -o pipefail
+          flutter test --reporter expanded 2>&1 | tee test_report.txt
+      - name: Collect results
+        if: always()
+        run: |
+          mkdir -p out
+          cp analyze_report.txt test_report.txt flutter_version.txt out/ 2>/dev/null || true
+          if [ "$IOS_GENERATED" = "1" ]; then zip -qr out/ios_folder.zip ios; fi
+      - name: Publish results to the ci-check branch
+        if: always()
+        run: bash tool/publish_branch.sh out ci-check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

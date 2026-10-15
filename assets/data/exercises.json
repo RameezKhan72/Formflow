@@ -1,0 +1,6831 @@
+{
+ "version": 2,
+ "exercises": [
+  {
+   "id": "push_up",
+   "name": "Push-up",
+   "group": "chest",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "bodyweight"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": false,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 10,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 158,
+    "depth": 95,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "hips_sag",
+     "when": {
+      "hipOffset": {
+       "gt": 0.12
+      }
+     },
+     "cue": "pushup_hips_sag",
+     "severity": "major",
+     "category": "safety",
+     "phase": "any",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "hips_high",
+     "when": {
+      "hipOffset": {
+       "lt": -0.15
+      }
+     },
+     "cue": "pushup_hips_high",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "any",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "pushup_go_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "chest": 0.5,
+    "triceps": 0.25,
+    "shoulders": 0.15,
+    "abs": 0.1
+   },
+   "tips": [
+    "Hands under the shoulders, fingers forward",
+    "Body in one straight line from head to heels",
+    "Lower until the chest nearly touches the floor"
+   ],
+   "mistakes": [
+    "Hips sagging|Squeeze glutes and brace your abs",
+    "Hips piked up|Lower the hips until the body is straight",
+    "Half reps|Lower until the elbows reach 90 degrees"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.08,
+    "scale": 0.88,
+    "armIk": true,
+    "period": 2.4,
+    "support": {
+     "pivot": "toes",
+     "reach": "hands",
+     "handFwd": 0.03,
+     "handWide": 0.0,
+     "pivotZ": 0.0,
+     "reachZ": 0.0
+    },
+    "start": {
+     "shin": 74,
+     "thigh": 74,
+     "torso": 74,
+     "foot": 164,
+     "head": 80,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 172
+    },
+    "end": {
+     "shin": 74,
+     "thigh": 74,
+     "torso": 74,
+     "foot": 164,
+     "head": 84,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 82
+    },
+    "start2d": {
+     "shin": 68,
+     "thigh": 68,
+     "torso": 68,
+     "foot": 165,
+     "head": 75
+    },
+    "end2d": {
+     "shin": 80,
+     "thigh": 80,
+     "torso": 80,
+     "foot": 172,
+     "head": 84
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "wide_push_up",
+   "name": "Wide Push-up",
+   "group": "chest",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "bodyweight"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": false,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 10,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 158,
+    "depth": 95,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "hips_sag",
+     "when": {
+      "hipOffset": {
+       "gt": 0.12
+      }
+     },
+     "cue": "pushup_hips_sag",
+     "severity": "major",
+     "category": "safety",
+     "phase": "any",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "hips_high",
+     "when": {
+      "hipOffset": {
+       "lt": -0.15
+      }
+     },
+     "cue": "pushup_hips_high",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "any",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "pushup_go_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "chest": 0.6,
+    "shoulders": 0.15,
+    "triceps": 0.15,
+    "abs": 0.1
+   },
+   "tips": [
+    "Hands one and a half shoulder-widths apart",
+    "Elbows out at about 60 degrees",
+    "Brace your core"
+   ],
+   "mistakes": [
+    "Flaring the elbows to 90 degrees|Keep the elbows at about 60 degrees",
+    "Hips sagging|Squeeze glutes and abs",
+    "Head dropping|Look at the floor just ahead of your hands"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.08,
+    "scale": 0.88,
+    "armIk": true,
+    "period": 2.4,
+    "support": {
+     "pivot": "toes",
+     "reach": "hands",
+     "handFwd": 0.03,
+     "handWide": 0.16,
+     "pivotZ": 0.0,
+     "reachZ": 0.0
+    },
+    "start": {
+     "shin": 74,
+     "thigh": 74,
+     "torso": 74,
+     "foot": 164,
+     "head": 80,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 172
+    },
+    "end": {
+     "shin": 74,
+     "thigh": 74,
+     "torso": 74,
+     "foot": 164,
+     "head": 84,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 82
+    },
+    "start2d": {
+     "shin": 68,
+     "thigh": 68,
+     "torso": 68,
+     "foot": 165,
+     "head": 75
+    },
+    "end2d": {
+     "shin": 80,
+     "thigh": 80,
+     "torso": 80,
+     "foot": 172,
+     "head": 84
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "knee_push_up",
+   "name": "Knee Push-up",
+   "group": "chest",
+   "mode": "reps",
+   "level": 1,
+   "equipment": [
+    "bodyweight",
+    "mat"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 158,
+    "depth": 95,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "hips_sag",
+     "when": {
+      "hipOffset": {
+       "gt": 0.14
+      }
+     },
+     "cue": "pushup_hips_sag",
+     "severity": "major",
+     "category": "safety",
+     "phase": "any",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "pushup_go_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "chest": 0.5,
+    "triceps": 0.25,
+    "shoulders": 0.15,
+    "abs": 0.1
+   },
+   "tips": [
+    "Knees on a mat, hips in line with the body",
+    "Hands under the shoulders",
+    "Lower the chest between the hands"
+   ],
+   "mistakes": [
+    "Hips pushed back|Keep knees, hips and shoulders in one line",
+    "Elbows flaring wide|Tuck the elbows to 45 degrees"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.08,
+    "scale": 0.88,
+    "armIk": true,
+    "period": 2.4,
+    "support": {
+     "pivot": "knees",
+     "reach": "hands",
+     "handFwd": 0.03,
+     "handWide": 0.0,
+     "pivotZ": 0.0,
+     "reachZ": 0.0
+    },
+    "start": {
+     "shin": 118,
+     "thigh": 64,
+     "torso": 64,
+     "foot": 200,
+     "head": 72,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 172
+    },
+    "end": {
+     "shin": 118,
+     "thigh": 64,
+     "torso": 64,
+     "foot": 200,
+     "head": 76,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 82
+    },
+    "start2d": {
+     "shin": 68,
+     "thigh": 68,
+     "torso": 68,
+     "foot": 165,
+     "head": 75
+    },
+    "end2d": {
+     "shin": 80,
+     "thigh": 80,
+     "torso": 80,
+     "foot": 172,
+     "head": 84
+    },
+    "props": [
+     "mat"
+    ]
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "incline_push_up",
+   "name": "Incline Push-up",
+   "group": "chest",
+   "mode": "reps",
+   "level": 1,
+   "equipment": [
+    "bench"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 158,
+    "depth": 95,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "hips_sag",
+     "when": {
+      "hipOffset": {
+       "gt": 0.12
+      }
+     },
+     "cue": "pushup_hips_sag",
+     "severity": "major",
+     "category": "safety",
+     "phase": "any",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "hips_high",
+     "when": {
+      "hipOffset": {
+       "lt": -0.15
+      }
+     },
+     "cue": "pushup_hips_high",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "any",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "pushup_go_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "chest": 0.5,
+    "triceps": 0.25,
+    "shoulders": 0.15,
+    "abs": 0.1
+   },
+   "tips": [
+    "Hands on the bench edge, shoulder-width",
+    "Walk the feet back until the body is straight",
+    "Touch the bench with your chest"
+   ],
+   "mistakes": [
+    "Hips sagging|Squeeze the glutes",
+    "Elbows flaring|Keep the elbows at 45 degrees",
+    "Bench too close|Step the feet back"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.08,
+    "scale": 0.88,
+    "armIk": true,
+    "period": 2.4,
+    "support": {
+     "pivot": "toes",
+     "reach": "hands",
+     "handFwd": 0.03,
+     "handWide": 0.0,
+     "pivotZ": 0.0,
+     "reachZ": 0.45
+    },
+    "start": {
+     "shin": 52,
+     "thigh": 52,
+     "torso": 52,
+     "foot": 142,
+     "head": 58,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 172
+    },
+    "end": {
+     "shin": 52,
+     "thigh": 52,
+     "torso": 52,
+     "foot": 142,
+     "head": 62,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 82
+    },
+    "start2d": {
+     "shin": 68,
+     "thigh": 68,
+     "torso": 68,
+     "foot": 165,
+     "head": 75
+    },
+    "end2d": {
+     "shin": 80,
+     "thigh": 80,
+     "torso": 80,
+     "foot": 172,
+     "head": 84
+    },
+    "props": [
+     "bench"
+    ],
+    "benchAt": "hands",
+    "benchOffset": -0.12
+   },
+   "cameraTip": "Place the phone side-on about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "decline_push_up",
+   "name": "Decline Push-up",
+   "group": "chest",
+   "mode": "reps",
+   "level": 3,
+   "equipment": [
+    "bench"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 8,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 158,
+    "depth": 95,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "hips_sag",
+     "when": {
+      "hipOffset": {
+       "gt": 0.12
+      }
+     },
+     "cue": "pushup_hips_sag",
+     "severity": "major",
+     "category": "safety",
+     "phase": "any",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "hips_high",
+     "when": {
+      "hipOffset": {
+       "lt": -0.15
+      }
+     },
+     "cue": "pushup_hips_high",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "any",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "pushup_go_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "chest": 0.45,
+    "shoulders": 0.25,
+    "triceps": 0.2,
+    "abs": 0.1
+   },
+   "tips": [
+    "Feet on the bench, hands on the floor",
+    "Keep a straight line from heels to head",
+    "Lower the forehead towards the floor"
+   ],
+   "mistakes": [
+    "Hips piking up|Lower the hips into line",
+    "Short range|Lower until elbows reach 90 degrees"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.08,
+    "scale": 0.88,
+    "armIk": true,
+    "period": 2.4,
+    "support": {
+     "pivot": "toes",
+     "reach": "hands",
+     "handFwd": 0.03,
+     "handWide": 0.0,
+     "pivotZ": 0.45,
+     "reachZ": 0.0
+    },
+    "start": {
+     "shin": 98,
+     "thigh": 98,
+     "torso": 98,
+     "foot": 188,
+     "head": 102,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 172
+    },
+    "end": {
+     "shin": 98,
+     "thigh": 98,
+     "torso": 98,
+     "foot": 188,
+     "head": 106,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 82
+    },
+    "start2d": {
+     "shin": 68,
+     "thigh": 68,
+     "torso": 68,
+     "foot": 165,
+     "head": 75
+    },
+    "end2d": {
+     "shin": 80,
+     "thigh": 80,
+     "torso": 80,
+     "foot": 172,
+     "head": 84
+    },
+    "props": [
+     "bench"
+    ],
+    "benchAt": "feet"
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "dumbbell_floor_press",
+   "name": "Dumbbell Floor Press",
+   "group": "chest",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "dumbbells",
+    "mat"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "strength",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 10,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "wristAboveShoulder",
+    "side": "auto",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": 0.6,
+    "complete": 0.55,
+    "depth": 0.95,
+    "hysteresis": 0.03
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "press_full_lockout",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "chest": 0.55,
+    "triceps": 0.3,
+    "shoulders": 0.15
+   },
+   "tips": [
+    "Lie on your back, knees bent",
+    "Upper arms at 45 degrees to the body",
+    "Press up until the arms are straight"
+   ],
+   "mistakes": [
+    "Elbows flared to 90 degrees|Tuck them to 45 degrees",
+    "Bouncing the elbows off the floor|Pause lightly, then press"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.4,
+    "props": [
+     "dumbbells",
+     "mat"
+    ],
+    "groundOn": [
+     "torso",
+     "neck"
+    ],
+    "plantFeet": {
+     "z": 0
+    },
+    "start": {
+     "torso": 270,
+     "head": 272,
+     "thigh": 225,
+     "shin": -40,
+     "foot": 95,
+     "upperArm": 0,
+     "forearm": 0,
+     "upperArmAbd": 86,
+     "forearmAbd": 2
+    },
+    "end": {
+     "torso": 270,
+     "head": 272,
+     "thigh": 225,
+     "shin": -40,
+     "foot": 95,
+     "upperArm": 0,
+     "forearm": 0,
+     "upperArmAbd": 10,
+     "forearmAbd": 2
+    },
+    "start2d": {
+     "torso": 270,
+     "head": 272,
+     "thigh": 225,
+     "shin": -40,
+     "foot": 95,
+     "upperArm": 200,
+     "forearm": 0,
+     "upperArmAbd": 12,
+     "forearmAbd": 12
+    },
+    "end2d": {
+     "torso": 270,
+     "head": 272,
+     "thigh": 225,
+     "shin": -40,
+     "foot": 95,
+     "upperArm": 362,
+     "forearm": 2,
+     "upperArmAbd": 12,
+     "forearmAbd": 12
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "dumbbell_fly",
+   "name": "Dumbbell Fly",
+   "group": "chest",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "dumbbells",
+    "mat"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "strength",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "wristAboveShoulder",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 0.93,
+    "complete": 0.98,
+    "depth": 0.35,
+    "hysteresis": 0.03
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "fly_open_wider",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "chest": 0.7,
+    "shoulders": 0.2,
+    "biceps": 0.1
+   },
+   "tips": [
+    "Slight bend in the elbows throughout",
+    "Open the arms in a wide arc",
+    "Squeeze the chest to bring them back"
+   ],
+   "mistakes": [
+    "Bending the elbows a lot|Keep the same slight bend",
+    "Going too deep|Stop when the elbows reach the floor"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.6,
+    "props": [
+     "dumbbells",
+     "mat"
+    ],
+    "groundOn": [
+     "torso",
+     "neck"
+    ],
+    "plantFeet": {
+     "z": 0
+    },
+    "camYaw": 25,
+    "start": {
+     "torso": 270,
+     "head": 272,
+     "thigh": 225,
+     "shin": -40,
+     "foot": 95,
+     "upperArm": 0,
+     "forearm": 0,
+     "upperArmAbd": 6,
+     "forearmAbd": 10
+    },
+    "end": {
+     "torso": 270,
+     "head": 272,
+     "thigh": 225,
+     "shin": -40,
+     "foot": 95,
+     "upperArm": 0,
+     "forearm": 0,
+     "upperArmAbd": 78,
+     "forearmAbd": 88
+    },
+    "start2d": {
+     "torso": 270,
+     "head": 272,
+     "thigh": 225,
+     "shin": -40,
+     "foot": 95,
+     "upperArm": 2,
+     "forearm": 6,
+     "upperArmAbd": 12,
+     "forearmAbd": 12
+    },
+    "end2d": {
+     "torso": 270,
+     "head": 272,
+     "thigh": 225,
+     "shin": -40,
+     "foot": 95,
+     "upperArm": 72,
+     "forearm": 78,
+     "upperArmAbd": 12,
+     "forearmAbd": 12
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "pull_up",
+   "name": "Pull-up",
+   "group": "back",
+   "mode": "reps",
+   "level": 4,
+   "equipment": [
+    "pull-up bar"
+   ],
+   "views": [
+    "front",
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": false,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist"
+   ],
+   "region": "upper",
+   "defaults": {
+    "sets": 3,
+    "reps": 7,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 140,
+    "complete": 150,
+    "depth": 60,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "pullup_chin_over_bar",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "lats": 0.5,
+    "biceps": 0.2,
+    "traps": 0.1,
+    "forearms": 0.1,
+    "abs": 0.05,
+    "shoulders": 0.05
+   },
+   "tips": [
+    "Start from a dead hang, hands wider than shoulders",
+    "Pull your chest towards the bar",
+    "Lower under control"
+   ],
+   "mistakes": [
+    "Half reps|Start from straight arms each time",
+    "Kipping or swinging|Brace the core and keep the legs still",
+    "Shrugging|Pull the shoulders down before pulling up"
+   ],
+   "keyframes": {
+    "anchor": "wrist",
+    "anchorX": 0.5,
+    "anchorY": 0.08,
+    "scale": 0.78,
+    "period": 2.6,
+    "props": [
+     "bar"
+    ],
+    "camYaw": 150,
+    "start": {
+     "upperArm": 0,
+     "upperArmAbd": 20,
+     "forearm": 0,
+     "forearmAbd": 12,
+     "torso": 0,
+     "thigh": 0,
+     "shin": -12,
+     "foot": 130
+    },
+    "end": {
+     "upperArm": 168,
+     "upperArmAbd": 52,
+     "forearm": 2,
+     "forearmAbd": -6,
+     "torso": -8,
+     "thigh": 6,
+     "shin": -16,
+     "foot": 130
+    }
+   },
+   "cameraTip": "Stand about 1 m from the phone, facing it, phone at chest height. Your head to hips must be in view."
+  },
+  {
+   "id": "chin_up",
+   "name": "Chin-up",
+   "group": "back",
+   "mode": "reps",
+   "level": 3,
+   "equipment": [
+    "pull-up bar"
+   ],
+   "views": [
+    "front",
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist"
+   ],
+   "region": "upper",
+   "defaults": {
+    "sets": 3,
+    "reps": 8,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 140,
+    "complete": 150,
+    "depth": 80,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "pullup_chin_over_bar",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "lats": 0.4,
+    "biceps": 0.35,
+    "forearms": 0.1,
+    "traps": 0.1,
+    "abs": 0.05
+   },
+   "tips": [
+    "Palms facing you, shoulder-width grip",
+    "Drive the elbows down to the ribs",
+    "Chin over the bar, then lower slowly"
+   ],
+   "mistakes": [
+    "Swinging the legs|Squeeze glutes and keep legs together",
+    "Dropping fast|Take 2 seconds on the way down"
+   ],
+   "keyframes": {
+    "anchor": "wrist",
+    "anchorX": 0.5,
+    "anchorY": 0.08,
+    "scale": 0.78,
+    "period": 2.6,
+    "props": [
+     "bar"
+    ],
+    "camYaw": 60,
+    "start": {
+     "upperArm": 0,
+     "upperArmAbd": 7,
+     "forearm": 0,
+     "forearmAbd": 2,
+     "torso": 0,
+     "thigh": 0,
+     "shin": -12,
+     "foot": 130
+    },
+    "end": {
+     "upperArm": 150,
+     "upperArmAbd": 14,
+     "forearm": 8,
+     "forearmAbd": -4,
+     "torso": -6,
+     "thigh": 8,
+     "shin": -18,
+     "foot": 130
+    }
+   },
+   "cameraTip": "Stand about 1 m from the phone, facing it, phone at chest height. Your head to hips must be in view."
+  },
+  {
+   "id": "bent_over_row",
+   "name": "Bent-over Row",
+   "group": "back",
+   "mode": "reps",
+   "level": 3,
+   "equipment": [
+    "dumbbells"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "strength",
+   "premium": false,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist",
+    "hip"
+   ],
+   "region": "upper",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 158,
+    "depth": 105,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "too_upright",
+     "when": {
+      "torsoLean": {
+       "lt": 30
+      }
+     },
+     "cue": "row_hinge_forward",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "shoulder",
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "row_pull_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "lats": 0.45,
+    "traps": 0.2,
+    "biceps": 0.15,
+    "shoulders": 0.1,
+    "lower_back": 0.1
+   },
+   "tips": [
+    "Hinge forward about 45 degrees, back flat",
+    "Pull the elbows back towards your hips",
+    "Squeeze the shoulder blades together"
+   ],
+   "mistakes": [
+    "Standing too upright|Push the hips back and hinge",
+    "Short pulls|Pull until the dumbbells touch your ribs",
+    "Jerking the weight|Use a slow, controlled pull"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.5,
+    "period": 2.2,
+    "props": [
+     "dumbbells"
+    ],
+    "start": {
+     "shin": 14,
+     "thigh": -32,
+     "torso": 58,
+     "upperArm": 180,
+     "forearm": 180,
+     "foot": 90,
+     "head": 62,
+     "upperArmAbd": 6
+    },
+    "end": {
+     "shin": 14,
+     "thigh": -32,
+     "torso": 58,
+     "upperArm": 248,
+     "forearm": 182,
+     "foot": 90,
+     "head": 62,
+     "upperArmAbd": 10
+    },
+    "start2d": {
+     "shin": 12,
+     "thigh": -35,
+     "torso": 55,
+     "upperArm": 180,
+     "forearm": 180,
+     "foot": 90,
+     "head": 50
+    },
+    "end2d": {
+     "shin": 12,
+     "thigh": -35,
+     "torso": 55,
+     "upperArm": 262,
+     "forearm": 182,
+     "foot": 90,
+     "head": 50
+    }
+   },
+   "cameraTip": "Stand about 1 m from the phone, side-on, phone at chest height. Your head to hips must be in view."
+  },
+  {
+   "id": "deadlift",
+   "name": "Deadlift",
+   "group": "back",
+   "mode": "reps",
+   "level": 4,
+   "equipment": [
+    "barbell"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "strength",
+   "premium": false,
+   "focus": [
+    "shoulder",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 8,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "hipAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 160,
+    "complete": 168,
+    "depth": 95,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "bar_far",
+     "when": {
+      "barGap": {
+       "gt": 0.6
+      }
+     },
+     "cue": "deadlift_bar_close",
+     "severity": "major",
+     "category": "safety",
+     "phase": "moving",
+     "joints": [
+      "wrist"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "squatting",
+     "when": {
+      "kneeAngle": {
+       "lt": 105
+      }
+     },
+     "cue": "deadlift_hips_up",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "bottom",
+     "joints": [
+      "hip",
+      "knee"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "deadlift_hinge_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "hamstrings": 0.3,
+    "glutes": 0.3,
+    "lower_back": 0.2,
+    "traps": 0.08,
+    "forearms": 0.07,
+    "quads": 0.05
+   },
+   "tips": [
+    "Bar over mid-foot, shins close",
+    "Push the hips back, keep a neutral spine",
+    "Drive through the heels and squeeze at the top"
+   ],
+   "mistakes": [
+    "Bar drifting away from the legs|Drag the bar up the shins",
+    "Rounding the back|Chest up, brace before you pull",
+    "Squatting the weight|Hips start higher than the knees"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.5,
+    "period": 2.8,
+    "props": [
+     "barbell"
+    ],
+    "start": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 180,
+     "forearm": 180,
+     "foot": 90,
+     "upperArmAbd": 4
+    },
+    "end": {
+     "shin": 22,
+     "thigh": -62,
+     "torso": 66,
+     "upperArm": 182,
+     "forearm": 182,
+     "foot": 90,
+     "head": 58,
+     "upperArmAbd": 4
+    }
+   },
+   "cameraTip": "Place the phone side-on about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "good_morning",
+   "name": "Good Morning",
+   "group": "back",
+   "mode": "reps",
+   "level": 3,
+   "equipment": [
+    "bodyweight"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": false,
+   "focus": [
+    "shoulder",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "hipAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 160,
+    "complete": 168,
+    "depth": 115,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "knees_bent",
+     "when": {
+      "kneeAngle": {
+       "lt": 140
+      }
+     },
+     "cue": "gm_soft_knees_only",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "knee"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "gm_hinge_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "hamstrings": 0.4,
+    "lower_back": 0.3,
+    "glutes": 0.3
+   },
+   "tips": [
+    "Hands behind the head, elbows wide",
+    "Soft knees, push the hips back",
+    "Keep the back flat"
+   ],
+   "mistakes": [
+    "Bending the knees too much|Keep only a slight bend",
+    "Rounding the back|Chest proud, look slightly ahead"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.5,
+    "period": 2.6,
+    "start": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 20,
+     "forearm": 290,
+     "foot": 90,
+     "upperArmAbd": 72,
+     "forearmAbd": -72
+    },
+    "end": {
+     "shin": 8,
+     "thigh": -14,
+     "torso": 80,
+     "upperArm": 100,
+     "upperArmAbd": 72,
+     "forearm": 370,
+     "forearmAbd": -72,
+     "foot": 90,
+     "head": 84
+    }
+   },
+   "cameraTip": "Place the phone side-on about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "superman",
+   "name": "Superman",
+   "group": "back",
+   "mode": "reps",
+   "level": 1,
+   "equipment": [
+    "bodyweight",
+    "mat"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "bodyLine",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 172,
+    "complete": 175,
+    "depth": 160,
+    "hysteresis": 3
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "superman_lift_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "shoulder",
+      "ankle"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "lower_back": 0.5,
+    "glutes": 0.25,
+    "shoulders": 0.1,
+    "hamstrings": 0.15
+   },
+   "tips": [
+    "Lie face down, arms overhead",
+    "Lift arms, chest and legs together",
+    "Hold for a second at the top"
+   ],
+   "mistakes": [
+    "Cranking the neck up|Keep looking at the floor",
+    "Bending the knees|Lift with straight legs"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.4,
+    "props": [
+     "mat"
+    ],
+    "start": {
+     "torso": 90,
+     "head": 92,
+     "thigh": 90,
+     "shin": 90,
+     "foot": 262,
+     "upperArm": 90,
+     "forearm": 90,
+     "upperArmAbd": 14
+    },
+    "end": {
+     "torso": 80,
+     "head": 76,
+     "thigh": 102,
+     "shin": 100,
+     "foot": 262,
+     "upperArm": 72,
+     "forearm": 72,
+     "upperArmAbd": 16
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "reverse_fly",
+   "name": "Reverse Fly",
+   "group": "back",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "dumbbells"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "strength",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist",
+    "hip"
+   ],
+   "region": "upper",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "wristAboveShoulder",
+    "side": "auto",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": -0.95,
+    "complete": -1.0,
+    "depth": -0.25,
+    "hysteresis": 0.03
+   },
+   "rules": [
+    {
+     "id": "too_upright",
+     "when": {
+      "torsoLean": {
+       "lt": 35
+      }
+     },
+     "cue": "row_hinge_forward",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "shoulder",
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "reverse_fly_wider",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "shoulders": 0.45,
+    "traps": 0.35,
+    "lats": 0.2
+   },
+   "tips": [
+    "Hinge forward with a flat back",
+    "Raise the arms out to the sides",
+    "Squeeze the shoulder blades"
+   ],
+   "mistakes": [
+    "Using momentum|Pause at the top",
+    "Shrugging the shoulders|Keep the neck long"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.4,
+    "props": [
+     "dumbbells"
+    ],
+    "camYaw": 20,
+    "start2d": {
+     "shin": 14,
+     "thigh": -30,
+     "torso": 64,
+     "head": 68,
+     "upperArm": 180,
+     "forearm": 180,
+     "foot": 90
+    },
+    "end2d": {
+     "shin": 14,
+     "thigh": -30,
+     "torso": 64,
+     "head": 68,
+     "upperArm": 100,
+     "forearm": 100,
+     "foot": 90
+    },
+    "start": {
+     "shin": 14,
+     "thigh": -30,
+     "torso": 64,
+     "head": 68,
+     "upperArm": 180,
+     "upperArmAbd": 8,
+     "forearm": 180,
+     "forearmAbd": 8,
+     "foot": 90
+    },
+    "end": {
+     "shin": 14,
+     "thigh": -30,
+     "torso": 64,
+     "head": 68,
+     "upperArm": 180,
+     "upperArmAbd": 82,
+     "forearm": 180,
+     "forearmAbd": 86,
+     "foot": 90
+    }
+   },
+   "cameraTip": "Stand about 1 m from the phone, facing it, phone at chest height. Your head to hips must be in view."
+  },
+  {
+   "id": "shoulder_press",
+   "name": "Shoulder Press",
+   "group": "shoulders",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "dumbbells"
+   ],
+   "views": [
+    "front",
+    "side"
+   ],
+   "status": "beta",
+   "type": "strength",
+   "premium": false,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist"
+   ],
+   "region": "upper",
+   "defaults": {
+    "sets": 3,
+    "reps": 10,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": 100,
+    "complete": 90,
+    "depth": 160,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "lean_back",
+     "when": {
+      "torsoLean": {
+       "gt": 15
+      }
+     },
+     "cue": "press_no_lean",
+     "severity": "major",
+     "category": "safety",
+     "phase": "moving",
+     "joints": [
+      "shoulder",
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "press_full_lockout",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "shoulders": 0.6,
+    "triceps": 0.25,
+    "traps": 0.1,
+    "abs": 0.05
+   },
+   "tips": [
+    "Start with the weights at shoulder height",
+    "Press straight up",
+    "Brace the core, no arching"
+   ],
+   "mistakes": [
+    "Leaning back|Squeeze glutes and abs",
+    "Not locking out|Straighten the arms overhead",
+    "Elbows too far forward|Keep them under the wrists"
+   ],
+   "keyframes": {
+    "view": "front",
+    "anchorX": 0.5,
+    "period": 2.4,
+    "props": [
+     "dumbbells"
+    ],
+    "start": {
+     "upperArm": 94,
+     "forearm": 2,
+     "upperArmFwd": 12,
+     "forearmFwd": 4
+    },
+    "end": {
+     "upperArm": 14,
+     "forearm": 6,
+     "upperArmFwd": 4,
+     "forearmFwd": 2
+    }
+   },
+   "cameraTip": "Stand about 1 m from the phone, facing it, phone at chest height. Your head to hips must be in view."
+  },
+  {
+   "id": "lateral_raise",
+   "name": "Lateral Raise",
+   "group": "shoulders",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "dumbbells"
+   ],
+   "views": [
+    "front"
+   ],
+   "status": "beta",
+   "type": "strength",
+   "premium": false,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist"
+   ],
+   "region": "upper",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "shoulderAngle",
+    "side": "auto",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": 30,
+    "complete": 22,
+    "depth": 80,
+    "hysteresis": 5
+   },
+   "rules": [
+    {
+     "id": "too_high",
+     "when": {
+      "shoulderAngle": {
+       "gt": 110
+      }
+     },
+     "cue": "lateral_shoulder_height",
+     "severity": "moderate",
+     "category": "safety",
+     "phase": "moving",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4,
+     "view": "front",
+     "bilateral": true
+    },
+    {
+     "id": "uneven",
+     "when": {
+      "armAsym": {
+       "gt": 20
+      }
+     },
+     "cue": "lateral_even_arms",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4,
+     "view": "front"
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "lateral_raise_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "shoulders": 0.8,
+    "traps": 0.2
+   },
+   "tips": [
+    "Slight bend in the elbows",
+    "Raise to shoulder height",
+    "Lead with the elbows"
+   ],
+   "mistakes": [
+    "Raising above shoulder height|Stop when the arms are level",
+    "Uneven arms|Watch both elbows rise together",
+    "Using momentum|Slow down, no body swing"
+   ],
+   "keyframes": {
+    "view": "front",
+    "anchorX": 0.5,
+    "period": 2.4,
+    "props": [
+     "dumbbells"
+    ],
+    "start": {
+     "upperArm": 170,
+     "forearm": 174
+    },
+    "end": {
+     "upperArm": 92,
+     "forearm": 86
+    }
+   },
+   "cameraTip": "Stand about 1 m from the phone, facing it, phone at chest height. Your head to hips must be in view."
+  },
+  {
+   "id": "front_raise",
+   "name": "Front Raise",
+   "group": "shoulders",
+   "mode": "reps",
+   "level": 1,
+   "equipment": [
+    "dumbbells"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "strength",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist"
+   ],
+   "region": "upper",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "shoulderAngle",
+    "side": "auto",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": 30,
+    "complete": 22,
+    "depth": 80,
+    "hysteresis": 5
+   },
+   "rules": [
+    {
+     "id": "too_high",
+     "when": {
+      "shoulderAngle": {
+       "gt": 110
+      }
+     },
+     "cue": "lateral_shoulder_height",
+     "severity": "moderate",
+     "category": "safety",
+     "phase": "moving",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "swing",
+     "when": {
+      "torsoLean": {
+       "gt": 15
+      }
+     },
+     "cue": "curl_no_swing",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "shoulder",
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "front_raise_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "shoulders": 0.8,
+    "chest": 0.1,
+    "traps": 0.1
+   },
+   "tips": [
+    "Arms straight with soft elbows",
+    "Raise in front to shoulder height",
+    "Lower slowly"
+   ],
+   "mistakes": [
+    "Swinging the body|Brace the core and stand tall",
+    "Raising too high|Stop at shoulder height"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.4,
+    "props": [
+     "dumbbells"
+    ],
+    "hand": "fist_fwd",
+    "start": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 176,
+     "forearm": 172,
+     "foot": 90,
+     "upperArmAbd": 8
+    },
+    "end": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 92,
+     "forearm": 88,
+     "foot": 90,
+     "upperArmAbd": 8
+    }
+   },
+   "cameraTip": "Stand about 1 m from the phone, side-on, phone at chest height. Your head to hips must be in view."
+  },
+  {
+   "id": "upright_row",
+   "name": "Upright Row",
+   "group": "shoulders",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "dumbbells"
+   ],
+   "views": [
+    "front"
+   ],
+   "status": "beta",
+   "type": "strength",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist"
+   ],
+   "region": "upper",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 158,
+    "depth": 75,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "too_high",
+     "when": {
+      "shoulderAngle": {
+       "gt": 110
+      }
+     },
+     "cue": "lateral_shoulder_height",
+     "severity": "moderate",
+     "category": "safety",
+     "phase": "moving",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4,
+     "view": "front",
+     "bilateral": true
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "upright_row_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "shoulders": 0.5,
+    "traps": 0.4,
+    "biceps": 0.1
+   },
+   "tips": [
+    "Weights in front of the thighs",
+    "Lead with the elbows up to shoulder height",
+    "Keep the weights close to the body"
+   ],
+   "mistakes": [
+    "Elbows above the shoulders|Stop at shoulder height",
+    "Leaning back|Stand tall and brace"
+   ],
+   "keyframes": {
+    "view": "front",
+    "anchorX": 0.5,
+    "period": 2.4,
+    "props": [
+     "dumbbells"
+    ],
+    "start": {
+     "upperArm": 172,
+     "forearm": 186,
+     "upperArmFwd": 8,
+     "forearmFwd": 12
+    },
+    "end": {
+     "upperArm": 94,
+     "forearm": 330,
+     "upperArmFwd": 8,
+     "forearmFwd": 26
+    },
+    "start2d": {
+     "upperArm": 172,
+     "forearm": 186
+    },
+    "end2d": {
+     "upperArm": 94,
+     "forearm": -30
+    }
+   },
+   "cameraTip": "Stand about 1 m from the phone, facing it, phone at chest height. Your head to hips must be in view."
+  },
+  {
+   "id": "pike_push_up",
+   "name": "Pike Push-up",
+   "group": "shoulders",
+   "mode": "reps",
+   "level": 3,
+   "equipment": [
+    "bodyweight"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 8,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 158,
+    "depth": 100,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "pike_go_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "shoulders": 0.55,
+    "triceps": 0.3,
+    "chest": 0.1,
+    "abs": 0.05
+   },
+   "tips": [
+    "Hips high in an upside-down V",
+    "Lower the top of the head towards the floor",
+    "Push back up through the shoulders"
+   ],
+   "mistakes": [
+    "Hips dropping|Keep the hips high",
+    "Elbows flaring wide|Keep them at 45 degrees"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.08,
+    "scale": 0.88,
+    "armIk": true,
+    "period": 2.4,
+    "support": {
+     "pivot": "toes",
+     "reach": "hands",
+     "handFwd": -0.02,
+     "handWide": 0.0,
+     "pivotZ": 0.0,
+     "reachZ": 0.0
+    },
+    "start": {
+     "shin": 34,
+     "thigh": 34,
+     "torso": 142,
+     "foot": 120,
+     "head": 160,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 172
+    },
+    "end": {
+     "shin": 34,
+     "thigh": 34,
+     "torso": 142,
+     "foot": 120,
+     "head": 164,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 88
+    },
+    "start2d": {
+     "shin": 68,
+     "thigh": 68,
+     "torso": 68,
+     "foot": 165,
+     "head": 75
+    },
+    "end2d": {
+     "shin": 80,
+     "thigh": 80,
+     "torso": 80,
+     "foot": 172,
+     "head": 84
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "bicep_curl",
+   "name": "Bicep Curl",
+   "group": "arms",
+   "mode": "reps",
+   "level": 1,
+   "equipment": [
+    "dumbbells"
+   ],
+   "views": [
+    "side",
+    "front"
+   ],
+   "status": "beta",
+   "type": "strength",
+   "premium": false,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist"
+   ],
+   "region": "upper",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 140,
+    "complete": 150,
+    "depth": 60,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "elbow_drift",
+     "when": {
+      "elbowDrift": {
+       "gt": 0.25
+      }
+     },
+     "cue": "curl_elbow_tucked",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "swing",
+     "when": {
+      "torsoLean": {
+       "gt": 15
+      }
+     },
+     "cue": "curl_no_swing",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "shoulder",
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "curl_curl_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "biceps": 0.75,
+    "forearms": 0.25
+   },
+   "tips": [
+    "Elbows pinned to your sides",
+    "Curl up, squeeze, lower slowly",
+    "No body swing"
+   ],
+   "mistakes": [
+    "Elbows drifting forward|Keep the elbows against your sides",
+    "Swinging the torso|Use a lighter weight and brace",
+    "Half reps|Straighten the arms fully at the bottom"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.5,
+    "period": 2.2,
+    "props": [
+     "dumbbells"
+    ],
+    "start": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 176,
+     "forearm": 176,
+     "foot": 90
+    },
+    "end": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 172,
+     "forearm": 28,
+     "foot": 90,
+     "forearmAbd": 4
+    }
+   },
+   "cameraTip": "Stand about 1 m from the phone, side-on, phone at chest height. Your head to hips must be in view."
+  },
+  {
+   "id": "hammer_curl",
+   "name": "Hammer Curl",
+   "group": "arms",
+   "mode": "reps",
+   "level": 1,
+   "equipment": [
+    "dumbbells"
+   ],
+   "views": [
+    "side",
+    "front"
+   ],
+   "status": "beta",
+   "type": "strength",
+   "premium": false,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist"
+   ],
+   "region": "upper",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 140,
+    "complete": 150,
+    "depth": 60,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "elbow_drift",
+     "when": {
+      "elbowDrift": {
+       "gt": 0.25
+      }
+     },
+     "cue": "curl_elbow_tucked",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "swing",
+     "when": {
+      "torsoLean": {
+       "gt": 15
+      }
+     },
+     "cue": "curl_no_swing",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "shoulder",
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "curl_curl_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "biceps": 0.5,
+    "forearms": 0.5
+   },
+   "tips": [
+    "Palms face each other",
+    "Elbows still at your sides",
+    "Control the way down"
+   ],
+   "mistakes": [
+    "Swinging|Brace the core",
+    "Elbows moving forward|Pin them to your sides"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.5,
+    "period": 2.2,
+    "props": [
+     "dumbbells"
+    ],
+    "start": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 176,
+     "forearm": 176,
+     "foot": 90
+    },
+    "end": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 172,
+     "forearm": 30,
+     "foot": 90,
+     "forearmAbd": 2
+    }
+   },
+   "cameraTip": "Stand about 1 m from the phone, side-on, phone at chest height. Your head to hips must be in view."
+  },
+  {
+   "id": "reverse_curl",
+   "name": "Reverse Curl",
+   "group": "arms",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "dumbbells"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "strength",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist"
+   ],
+   "region": "upper",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 140,
+    "complete": 150,
+    "depth": 65,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "elbow_drift",
+     "when": {
+      "elbowDrift": {
+       "gt": 0.25
+      }
+     },
+     "cue": "curl_elbow_tucked",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "swing",
+     "when": {
+      "torsoLean": {
+       "gt": 15
+      }
+     },
+     "cue": "curl_no_swing",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "shoulder",
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "curl_curl_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "forearms": 0.55,
+    "biceps": 0.45
+   },
+   "tips": [
+    "Overhand grip, knuckles up",
+    "Elbows fixed at your sides",
+    "Lower slowly"
+   ],
+   "mistakes": [
+    "Bending the wrists|Keep the wrists straight",
+    "Swinging|Use a lighter weight"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.5,
+    "period": 2.2,
+    "props": [
+     "dumbbells"
+    ],
+    "start": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 176,
+     "forearm": 176,
+     "foot": 90
+    },
+    "end": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 170,
+     "forearm": 36,
+     "foot": 90
+    }
+   },
+   "cameraTip": "Stand about 1 m from the phone, side-on, phone at chest height. Your head to hips must be in view."
+  },
+  {
+   "id": "overhead_triceps",
+   "name": "Overhead Triceps Extension",
+   "group": "arms",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "dumbbells"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "strength",
+   "premium": false,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist"
+   ],
+   "region": "upper",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": 70,
+    "complete": 60,
+    "depth": 150,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "ribs_flare",
+     "when": {
+      "torsoLean": {
+       "gt": 20
+      }
+     },
+     "cue": "triceps_ribs_down",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "shoulder",
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "triceps_full_extension",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "triceps": 0.85,
+    "shoulders": 0.1,
+    "abs": 0.05
+   },
+   "tips": [
+    "Elbows point to the ceiling",
+    "Lower the weights behind your head",
+    "Extend fully"
+   ],
+   "mistakes": [
+    "Elbows flaring out|Keep them close to the head",
+    "Arching the lower back|Ribs down, brace the abs"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.5,
+    "period": 2.2,
+    "props": [
+     "dumbbells"
+    ],
+    "start": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 8,
+     "forearm": 205,
+     "foot": 90,
+     "upperArmAbd": 10,
+     "forearmAbd": -14
+    },
+    "end": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 6,
+     "forearm": 362,
+     "foot": 90,
+     "upperArmAbd": 10,
+     "forearmAbd": -4
+    }
+   },
+   "cameraTip": "Stand about 1 m from the phone, side-on, phone at chest height. Your head to hips must be in view."
+  },
+  {
+   "id": "triceps_kickback",
+   "name": "Triceps Kickback",
+   "group": "arms",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "dumbbells"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "strength",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist",
+    "hip"
+   ],
+   "region": "upper",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": 118,
+    "complete": 112,
+    "depth": 160,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "elbow_drop",
+     "when": {
+      "elbowDrift": {
+       "lt": 0.15
+      }
+     },
+     "cue": "kickback_elbow_up",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "triceps_full_extension",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "triceps": 0.85,
+    "shoulders": 0.1,
+    "lower_back": 0.05
+   },
+   "tips": [
+    "Hinge forward, upper arms parallel to the floor",
+    "Straighten the arms behind you",
+    "Only the forearms move"
+   ],
+   "mistakes": [
+    "Elbows dropping|Keep the upper arms high and still",
+    "Swinging the weight|Slow down and pause at the top"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.2,
+    "props": [
+     "dumbbells"
+    ],
+    "start": {
+     "shin": 14,
+     "thigh": -32,
+     "torso": 62,
+     "head": 66,
+     "upperArm": 252,
+     "forearm": 178,
+     "foot": 90,
+     "upperArmAbd": 4
+    },
+    "end": {
+     "shin": 14,
+     "thigh": -32,
+     "torso": 62,
+     "head": 66,
+     "upperArm": 252,
+     "forearm": 246,
+     "foot": 90,
+     "upperArmAbd": 4
+    }
+   },
+   "cameraTip": "Stand about 1 m from the phone, side-on, phone at chest height. Your head to hips must be in view."
+  },
+  {
+   "id": "skull_crusher",
+   "name": "Skull Crusher",
+   "group": "arms",
+   "mode": "reps",
+   "level": 3,
+   "equipment": [
+    "dumbbells",
+    "mat"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "strength",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 10,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": 95,
+    "complete": 88,
+    "depth": 155,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "triceps_full_extension",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "triceps": 0.9,
+    "shoulders": 0.05,
+    "chest": 0.05
+   },
+   "tips": [
+    "Lie on your back, arms up",
+    "Bend only at the elbows to lower beside the head",
+    "Extend back up"
+   ],
+   "mistakes": [
+    "Elbows flaring|Keep them shoulder-width",
+    "Upper arms moving|Keep them still and vertical"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.4,
+    "props": [
+     "dumbbells",
+     "mat"
+    ],
+    "groundOn": [
+     "torso",
+     "neck"
+    ],
+    "plantFeet": {
+     "z": 0
+    },
+    "start": {
+     "torso": 270,
+     "head": 272,
+     "thigh": 225,
+     "shin": -40,
+     "foot": 95,
+     "upperArm": 348,
+     "forearm": 236,
+     "upperArmAbd": 6,
+     "forearmAbd": -4
+    },
+    "end": {
+     "torso": 270,
+     "head": 272,
+     "thigh": 225,
+     "shin": -40,
+     "foot": 95,
+     "upperArm": 352,
+     "forearm": 352,
+     "upperArmAbd": 6,
+     "forearmAbd": 0
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "bench_dip",
+   "name": "Bench Dip",
+   "group": "arms",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "bench"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": false,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist",
+    "hip"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 10,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 158,
+    "depth": 112,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "lean",
+     "when": {
+      "torsoLean": {
+       "gt": 30
+      }
+     },
+     "cue": "dip_chest_up",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "shoulder"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "dip_go_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "triceps": 0.6,
+    "chest": 0.2,
+    "shoulders": 0.2
+   },
+   "tips": [
+    "Hands on the bench edge, fingers forward",
+    "Lower until the elbows reach 90 degrees",
+    "Keep the back close to the bench"
+   ],
+   "mistakes": [
+    "Shallow dips|Lower until the upper arms are level",
+    "Shoulders shrugging up|Keep the chest proud",
+    "Hips drifting away|Slide the back down the bench"
+   ],
+   "keyframes": {
+    "anchor": "wrist",
+    "anchorX": 0.33,
+    "anchorY": 0.765,
+    "period": 2.4,
+    "props": [
+     "bench"
+    ],
+    "plantFeet": true,
+    "benchAt": "hands",
+    "benchOffset": 0.27,
+    "hand": "fist_fwd",
+    "start": {
+     "upperArm": 200,
+     "forearm": 196,
+     "torso": 2,
+     "head": 6,
+     "thigh": 276,
+     "shin": -4,
+     "foot": 90,
+     "upperArmAbd": 8
+    },
+    "end": {
+     "upperArm": 250,
+     "forearm": 178,
+     "torso": 8,
+     "head": 10,
+     "thigh": 262,
+     "shin": -8,
+     "foot": 90,
+     "upperArmAbd": 8
+    }
+   },
+   "cameraTip": "Place the phone side-on about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "diamond_push_up",
+   "name": "Diamond Push-up",
+   "group": "arms",
+   "mode": "reps",
+   "level": 3,
+   "equipment": [
+    "bodyweight"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": false,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 8,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "elbowAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 158,
+    "depth": 95,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "hips_sag",
+     "when": {
+      "hipOffset": {
+       "gt": 0.12
+      }
+     },
+     "cue": "pushup_hips_sag",
+     "severity": "major",
+     "category": "safety",
+     "phase": "any",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "hips_high",
+     "when": {
+      "hipOffset": {
+       "lt": -0.15
+      }
+     },
+     "cue": "pushup_hips_high",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "any",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "pushup_go_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "triceps": 0.5,
+    "chest": 0.3,
+    "shoulders": 0.1,
+    "abs": 0.1
+   },
+   "tips": [
+    "Thumbs and index fingers form a diamond",
+    "Elbows close to the body",
+    "Full range of motion"
+   ],
+   "mistakes": [
+    "Hips sagging|Squeeze glutes and abs",
+    "Elbows flaring|Brush the elbows past the ribs"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.08,
+    "scale": 0.88,
+    "armIk": true,
+    "period": 2.4,
+    "support": {
+     "pivot": "toes",
+     "reach": "hands",
+     "handFwd": 0.03,
+     "handWide": -0.12,
+     "pivotZ": 0.0,
+     "reachZ": 0.0
+    },
+    "start": {
+     "shin": 74,
+     "thigh": 74,
+     "torso": 74,
+     "foot": 164,
+     "head": 80,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 172
+    },
+    "end": {
+     "shin": 74,
+     "thigh": 74,
+     "torso": 74,
+     "foot": 164,
+     "head": 84,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 82
+    },
+    "start2d": {
+     "shin": 68,
+     "thigh": 68,
+     "torso": 68,
+     "foot": 165,
+     "head": 75
+    },
+    "end2d": {
+     "shin": 80,
+     "thigh": 80,
+     "torso": 80,
+     "foot": 172,
+     "head": 84
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "plank",
+   "name": "Plank",
+   "group": "abs",
+   "mode": "timed",
+   "level": 1,
+   "equipment": [
+    "bodyweight",
+    "mat"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "isometric",
+   "premium": false,
+   "focus": [
+    "shoulder",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 0,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "bodyLine",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 160,
+    "depth": 100
+   },
+   "rules": [
+    {
+     "id": "not_in_position",
+     "when": {
+      "torsoHorizontal": {
+       "gt": 45
+      }
+     },
+     "cue": "plank_get_in_position",
+     "severity": "major",
+     "category": "form",
+     "phase": "any",
+     "joints": [
+      "shoulder",
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "hips_sag",
+     "when": {
+      "hipOffset": {
+       "gt": 0.08
+      }
+     },
+     "cue": "plank_hips_sag",
+     "severity": "major",
+     "category": "safety",
+     "phase": "any",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "hips_high",
+     "when": {
+      "hipOffset": {
+       "lt": -0.12
+      }
+     },
+     "cue": "plank_hips_high",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "any",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "abs": 0.6,
+    "obliques": 0.2,
+    "shoulders": 0.1,
+    "glutes": 0.1
+   },
+   "tips": [
+    "Elbows under the shoulders",
+    "Squeeze glutes and brace the core",
+    "Straight line from head to heels"
+   ],
+   "mistakes": [
+    "Hips sagging|Tuck the pelvis and squeeze the glutes",
+    "Hips too high|Lower into a straight line",
+    "Holding the breath|Breathe slowly through the nose"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.08,
+    "scale": 0.88,
+    "props": [
+     "mat"
+    ],
+    "support": {
+     "pivot": "toes",
+     "reach": "elbows"
+    },
+    "start": {
+     "shin": 79,
+     "thigh": 79,
+     "torso": 79,
+     "upperArm": 180,
+     "forearm": 90,
+     "foot": 168,
+     "head": 82
+    },
+    "end": {
+     "shin": 84,
+     "thigh": 96,
+     "torso": 66,
+     "upperArm": 180,
+     "forearm": 90,
+     "foot": 168,
+     "head": 72
+    }
+   },
+   "hold": {
+    "torsoHorizontal": {
+     "lt": 40
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "side_plank",
+   "name": "Side Plank",
+   "group": "abs",
+   "mode": "timed",
+   "level": 2,
+   "equipment": [
+    "bodyweight",
+    "mat"
+   ],
+   "views": [
+    "front"
+   ],
+   "status": "beta",
+   "type": "isometric",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 0,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "bodyLine",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 160,
+    "depth": 100
+   },
+   "rules": [
+    {
+     "id": "hips_sag",
+     "when": {
+      "hipOffset": {
+       "gt": 0.1
+      }
+     },
+     "cue": "plank_hips_sag",
+     "severity": "major",
+     "category": "safety",
+     "phase": "any",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "obliques": 0.6,
+    "abs": 0.2,
+    "shoulders": 0.1,
+    "glutes": 0.1
+   },
+   "tips": [
+    "Elbow under the shoulder",
+    "Lift the hips into a straight line",
+    "Stack the feet or stagger them"
+   ],
+   "mistakes": [
+    "Hips dropping|Push the floor away and lift the hips",
+    "Rolling forward|Keep the chest facing forward"
+   ],
+   "keyframes": {
+    "view": "front",
+    "anchorX": 0.5,
+    "props": [
+     "mat"
+    ],
+    "camYaw": -8,
+    "support": {
+     "pivot": "toes",
+     "reach": "elbows",
+     "axis": "y",
+     "side": "l"
+    },
+    "start": {
+     "torso": 0,
+     "thigh": 2,
+     "shin": 2,
+     "upperArm": 90,
+     "forearm": 90,
+     "forearmFwd": 88,
+     "upperArm2": 178,
+     "forearm2": 150,
+     "bodyRoll": 72
+    },
+    "end": {
+     "torso": 0,
+     "thigh": 2,
+     "shin": 2,
+     "upperArm": 90,
+     "forearm": 90,
+     "forearmFwd": 88,
+     "upperArm2": 178,
+     "forearm2": 150,
+     "bodyRoll": 72
+    }
+   },
+   "hold": {
+    "bodyLine": {
+     "gt": 150
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "hollow_hold",
+   "name": "Hollow Hold",
+   "group": "abs",
+   "mode": "timed",
+   "level": 3,
+   "equipment": [
+    "bodyweight",
+    "mat"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "isometric",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 0,
+    "seconds": 20
+   },
+   "metric": {
+    "measure": "hipAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 160,
+    "complete": 170,
+    "depth": 150
+   },
+   "rules": [
+    {
+     "id": "legs_drop",
+     "when": {
+      "hipAngle": {
+       "gt": 178
+      }
+     },
+     "cue": "hollow_legs_up",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "any",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "abs": 0.75,
+    "obliques": 0.15,
+    "quads": 0.1
+   },
+   "tips": [
+    "Lower back pressed into the floor",
+    "Arms and legs long and lifted",
+    "Hold the banana shape"
+   ],
+   "mistakes": [
+    "Lower back arching|Raise the legs a little higher",
+    "Holding the breath|Breathe steadily"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "props": [
+     "mat"
+    ],
+    "groundOn": [
+     "root"
+    ],
+    "start": {
+     "torso": 286,
+     "head": 296,
+     "thigh": 256,
+     "shin": 256,
+     "foot": 345,
+     "upperArm": 284,
+     "forearm": 284
+    },
+    "end": {
+     "torso": 286,
+     "head": 296,
+     "thigh": 256,
+     "shin": 256,
+     "foot": 345,
+     "upperArm": 284,
+     "forearm": 284
+    }
+   },
+   "hold": {
+    "hipAngle": {
+     "lt": 178
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "sit_up",
+   "name": "Sit-up",
+   "group": "abs",
+   "mode": "reps",
+   "level": 1,
+   "equipment": [
+    "bodyweight",
+    "mat"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": false,
+   "focus": [
+    "shoulder",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 15,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "hipAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 115,
+    "complete": 122,
+    "depth": 75,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "situp_come_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "shoulder",
+      "hip"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "abs": 0.7,
+    "obliques": 0.2,
+    "quads": 0.1
+   },
+   "tips": [
+    "Knees bent, feet flat",
+    "Curl up vertebra by vertebra",
+    "Exhale on the way up"
+   ],
+   "mistakes": [
+    "Pulling on the neck|Reach the arms forward instead",
+    "Feet lifting|Anchor the heels into the floor"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.72,
+    "period": 2.4,
+    "props": [
+     "mat"
+    ],
+    "groundOn": [
+     "root"
+    ],
+    "plantFeet": {
+     "z": 0
+    },
+    "start": {
+     "shin": -45,
+     "thigh": 225,
+     "torso": 270,
+     "upperArm": 80,
+     "forearm": 80,
+     "foot": 95,
+     "head": 275
+    },
+    "end": {
+     "shin": -45,
+     "thigh": 225,
+     "torso": 345,
+     "upperArm": 70,
+     "forearm": 70,
+     "foot": 95,
+     "head": 355
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "crunch",
+   "name": "Crunch",
+   "group": "abs",
+   "mode": "reps",
+   "level": 1,
+   "equipment": [
+    "bodyweight",
+    "mat"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 15,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "torsoHorizontal",
+    "side": "auto",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": 8,
+    "complete": 5,
+    "depth": 18,
+    "hysteresis": 2
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "crunch_lift_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "shoulder"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "abs": 0.8,
+    "obliques": 0.2
+   },
+   "tips": [
+    "Lower back stays on the floor",
+    "Lift the shoulder blades off the floor",
+    "Exhale as you crunch"
+   ],
+   "mistakes": [
+    "Pulling the head|Reach the hands towards the knees",
+    "Using momentum|Pause at the top"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.0,
+    "props": [
+     "mat"
+    ],
+    "groundOn": [
+     "root"
+    ],
+    "plantFeet": {
+     "z": 0
+    },
+    "start": {
+     "torso": 270,
+     "head": 272,
+     "thigh": 225,
+     "shin": -40,
+     "foot": 95,
+     "upperArm": 98,
+     "forearm": 98,
+     "upperArmAbd": 10,
+     "forearmAbd": 6
+    },
+    "end": {
+     "torso": 292,
+     "head": 310,
+     "thigh": 225,
+     "shin": -40,
+     "foot": 95,
+     "upperArm": 76,
+     "forearm": 76,
+     "upperArmAbd": 10,
+     "forearmAbd": 6
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "leg_raise",
+   "name": "Leg Raise",
+   "group": "abs",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "bodyweight",
+    "mat"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "hipAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 160,
+    "complete": 168,
+    "depth": 100,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "legs_bent",
+     "when": {
+      "kneeAngle": {
+       "lt": 140
+      }
+     },
+     "cue": "legraise_straight_legs",
+     "severity": "minor",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "knee"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "legraise_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "abs": 0.65,
+    "obliques": 0.15,
+    "quads": 0.2
+   },
+   "tips": [
+    "Lie flat, hands by your sides",
+    "Raise straight legs to vertical",
+    "Lower slowly without arching"
+   ],
+   "mistakes": [
+    "Arching the lower back|Lower only as far as you can keep it flat",
+    "Bending the knees|Keep the legs straight"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.6,
+    "props": [
+     "mat"
+    ],
+    "start": {
+     "torso": 270,
+     "head": 272,
+     "thigh": 268,
+     "shin": 268,
+     "foot": 0,
+     "upperArm": 94,
+     "forearm": 94,
+     "upperArmAbd": 14
+    },
+    "end": {
+     "torso": 270,
+     "head": 272,
+     "thigh": 178,
+     "shin": 178,
+     "foot": 270,
+     "upperArm": 94,
+     "forearm": 94,
+     "upperArmAbd": 14
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "v_up",
+   "name": "V-up",
+   "group": "abs",
+   "mode": "reps",
+   "level": 3,
+   "equipment": [
+    "bodyweight",
+    "mat"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 10,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "hipAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 160,
+    "depth": 85,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "vup_reach_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "abs": 0.7,
+    "obliques": 0.15,
+    "quads": 0.15
+   },
+   "tips": [
+    "Start long with arms overhead",
+    "Lift arms and legs together",
+    "Reach for the toes, balance on the hips"
+   ],
+   "mistakes": [
+    "Bending the knees|Keep the legs straight",
+    "Dropping fast|Lower with control"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.4,
+    "props": [
+     "mat"
+    ],
+    "groundOn": [
+     "root"
+    ],
+    "start": {
+     "torso": 272,
+     "head": 274,
+     "thigh": 268,
+     "shin": 268,
+     "foot": 0,
+     "upperArm": 272,
+     "forearm": 272
+    },
+    "end": {
+     "torso": 322,
+     "head": 330,
+     "thigh": 218,
+     "shin": 218,
+     "foot": 300,
+     "upperArm": 406,
+     "forearm": 406
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "dead_bug",
+   "name": "Dead Bug",
+   "group": "abs",
+   "mode": "reps",
+   "level": 1,
+   "equipment": [
+    "bodyweight",
+    "mat"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 10,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "hipAngle",
+    "side": "max",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": 100,
+    "complete": 95,
+    "depth": 150,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "deadbug_extend_further",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "abs": 0.7,
+    "obliques": 0.2,
+    "quads": 0.1
+   },
+   "tips": [
+    "Arms up, knees over the hips",
+    "Lower the opposite arm and leg",
+    "Keep the lower back on the floor"
+   ],
+   "mistakes": [
+    "Back arching|Move only as far as the back stays down",
+    "Rushing|Slow, controlled reps"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.4,
+    "props": [
+     "mat"
+    ],
+    "groundOn": [
+     "torso",
+     "root"
+    ],
+    "alternate": true,
+    "start": {
+     "torso": 270,
+     "head": 272,
+     "thigh": 180,
+     "shin": 270,
+     "foot": 0,
+     "upperArm": 0,
+     "forearm": 0
+    },
+    "end": {
+     "torso": 270,
+     "head": 272,
+     "thigh": 180,
+     "shin": 270,
+     "foot": 0,
+     "upperArm": -104,
+     "forearm": -104,
+     "thigh2": 246,
+     "shin2": 246,
+     "foot2": 330,
+     "upperArm2": 0,
+     "forearm2": 0
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "mountain_climber",
+   "name": "Mountain Climber",
+   "group": "abs",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "bodyweight"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "cardio",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 20,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "hipAngle",
+    "side": "min",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 158,
+    "depth": 70,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "hips_sag",
+     "when": {
+      "hipOffset": {
+       "gt": 0.12
+      }
+     },
+     "cue": "pushup_hips_sag",
+     "severity": "major",
+     "category": "safety",
+     "phase": "any",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "climber_knee_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "knee"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "abs": 0.45,
+    "shoulders": 0.2,
+    "quads": 0.2,
+    "obliques": 0.15
+   },
+   "tips": [
+    "Start in a high plank",
+    "Drive one knee towards the chest",
+    "Switch legs quickly, hips level"
+   ],
+   "mistakes": [
+    "Hips bouncing up|Keep the hips in line with the shoulders",
+    "Hands too far forward|Wrists under the shoulders"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.08,
+    "scale": 0.88,
+    "armIk": true,
+    "period": 1.4,
+    "alternate": true,
+    "support": {
+     "pivot": "toes",
+     "reach": "hands",
+     "handFwd": 0.03,
+     "pivotFoot": "r",
+     "clearFloor": [
+      "l"
+     ]
+    },
+    "start": {
+     "shin": 74,
+     "thigh": 74,
+     "torso": 74,
+     "foot": 164,
+     "head": 80,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 174
+    },
+    "end": {
+     "shin": 40,
+     "thigh": -80,
+     "torso": 74,
+     "foot": 140,
+     "head": 80,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 174,
+     "thigh2": 74,
+     "shin2": 74,
+     "foot2": 164
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "bird_dog",
+   "name": "Bird Dog",
+   "group": "abs",
+   "mode": "reps",
+   "level": 1,
+   "equipment": [
+    "bodyweight",
+    "mat"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 10,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "hipAngle",
+    "side": "max",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": 110,
+    "complete": 102,
+    "depth": 160,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "birddog_extend_further",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "abs": 0.4,
+    "lower_back": 0.3,
+    "glutes": 0.2,
+    "shoulders": 0.1
+   },
+   "tips": [
+    "Hands under shoulders, knees under hips",
+    "Reach the opposite arm and leg long",
+    "Keep the back flat like a table"
+   ],
+   "mistakes": [
+    "Twisting the hips|Keep both hips level",
+    "Lifting the leg too high|Stop at hip height"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.6,
+    "props": [
+     "mat"
+    ],
+    "alternate": true,
+    "support": {
+     "pivot": "knees",
+     "reach": "hands",
+     "handFwd": 0.0,
+     "plant": [
+      "l"
+     ]
+    },
+    "start": {
+     "torso": 90,
+     "head": 98,
+     "thigh": 0,
+     "shin": 90,
+     "foot": 262,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 176
+    },
+    "end": {
+     "torso": 90,
+     "head": 98,
+     "thigh": 88,
+     "shin": 88,
+     "foot": 250,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 176,
+     "thigh2": 0,
+     "shin2": 90,
+     "foot2": 262,
+     "upperArm2": 92,
+     "forearm2": 92
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "squat",
+   "name": "Squat",
+   "group": "legs",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "bodyweight"
+   ],
+   "views": [
+    "side",
+    "front"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": false,
+   "focus": [
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 10,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "kneeAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 162,
+    "depth": 105,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "back_lean",
+     "when": {
+      "torsoLean": {
+       "gt": 50
+      }
+     },
+     "cue": "squat_back_straight",
+     "severity": "major",
+     "category": "safety",
+     "phase": "moving",
+     "joints": [
+      "shoulder",
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "knee_cave",
+     "when": {
+      "kneeInward": {
+       "gt": 0.12
+      },
+      "kneeAngle": {
+       "lt": 140
+      }
+     },
+     "cue": "squat_knees_out",
+     "severity": "major",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "knee"
+     ],
+     "persistFrames": 4,
+     "view": "front",
+     "bilateral": true
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "squat_go_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "hip",
+      "knee"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "quads": 0.45,
+    "glutes": 0.3,
+    "hamstrings": 0.15,
+    "calves": 0.05,
+    "abs": 0.05
+   },
+   "tips": [
+    "Feet shoulder-width apart, toes slightly out",
+    "Sit back as if onto a chair",
+    "Keep your chest up and heels down"
+   ],
+   "mistakes": [
+    "Leaning the chest too far forward|Keep the chest proud",
+    "Knees caving inwards|Push the knees out over the toes",
+    "Stopping above parallel|Sit until the thighs are level"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.5,
+    "period": 2.6,
+    "start": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 90,
+     "forearm": 90,
+     "foot": 90,
+     "upperArmAbd": 6
+    },
+    "end": {
+     "shin": 34,
+     "thigh": -74,
+     "torso": 40,
+     "head": 30,
+     "upperArm": 86,
+     "forearm": 86,
+     "foot": 90,
+     "upperArmAbd": 6,
+     "thighAbd": 8
+    }
+   },
+   "cameraTip": "Place the phone side-on about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "goblet_squat",
+   "name": "Goblet Squat",
+   "group": "legs",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "dumbbells"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "strength",
+   "premium": true,
+   "focus": [
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 10,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "kneeAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 162,
+    "depth": 100,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "back_lean",
+     "when": {
+      "torsoLean": {
+       "gt": 45
+      }
+     },
+     "cue": "squat_back_straight",
+     "severity": "major",
+     "category": "safety",
+     "phase": "moving",
+     "joints": [
+      "shoulder",
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "squat_go_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "hip",
+      "knee"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "quads": 0.45,
+    "glutes": 0.3,
+    "abs": 0.1,
+    "hamstrings": 0.1,
+    "biceps": 0.05
+   },
+   "tips": [
+    "Hold one dumbbell at the chest",
+    "Elbows inside the knees at the bottom",
+    "Stand tall at the top"
+   ],
+   "mistakes": [
+    "Rounding forward|Keep the weight close to the chest",
+    "Heels lifting|Push through the whole foot"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.6,
+    "props": [
+     "goblet"
+    ],
+    "start": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 168,
+     "forearm": 6,
+     "foot": 90,
+     "upperArmAbd": 18,
+     "forearmAbd": -34
+    },
+    "end": {
+     "shin": 34,
+     "thigh": -76,
+     "torso": 32,
+     "head": 22,
+     "upperArm": 170,
+     "forearm": 18,
+     "upperArmAbd": 26,
+     "forearmAbd": -36,
+     "foot": 90,
+     "thighAbd": 12
+    }
+   },
+   "cameraTip": "Place the phone side-on about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "sumo_squat",
+   "name": "Sumo Squat",
+   "group": "legs",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "bodyweight"
+   ],
+   "views": [
+    "front"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "kneeAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 162,
+    "depth": 110,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "knee_cave",
+     "when": {
+      "kneeInward": {
+       "gt": 0.12
+      },
+      "kneeAngle": {
+       "lt": 140
+      }
+     },
+     "cue": "squat_knees_out",
+     "severity": "major",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "knee"
+     ],
+     "persistFrames": 4,
+     "view": "front",
+     "bilateral": true
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "squat_go_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "hip",
+      "knee"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "quads": 0.35,
+    "glutes": 0.4,
+    "hamstrings": 0.1,
+    "calves": 0.05,
+    "abs": 0.1
+   },
+   "tips": [
+    "Wide stance, toes turned out",
+    "Knees track over the toes",
+    "Sit straight down"
+   ],
+   "mistakes": [
+    "Knees caving in|Push them out over the toes",
+    "Leaning forward|Keep the torso upright"
+   ],
+   "keyframes": {
+    "view": "front",
+    "anchorX": 0.5,
+    "period": 2.6,
+    "camYaw": -20,
+    "start": {
+     "torso": 0,
+     "thigh": -16,
+     "shin": -16,
+     "upperArm": 168,
+     "forearm": 330,
+     "forearmFwd": 70,
+     "upperArmFwd": 30,
+     "toeOut": 35
+    },
+    "end": {
+     "torso": 0,
+     "torsoFwd": 14,
+     "thigh": -66,
+     "thighFwd": 22,
+     "shin": 8,
+     "shinFwd": -6,
+     "upperArm": 168,
+     "forearm": 330,
+     "forearmFwd": 70,
+     "upperArmFwd": 30,
+     "toeOut": 35
+    }
+   },
+   "cameraTip": "Place the phone in front of you about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "jump_squat",
+   "name": "Jump Squat",
+   "group": "legs",
+   "mode": "reps",
+   "level": 3,
+   "equipment": [
+    "bodyweight"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "cardio",
+   "premium": true,
+   "focus": [
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 10,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "kneeAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 160,
+    "depth": 110,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "back_lean",
+     "when": {
+      "torsoLean": {
+       "gt": 50
+      }
+     },
+     "cue": "squat_back_straight",
+     "severity": "major",
+     "category": "safety",
+     "phase": "moving",
+     "joints": [
+      "shoulder",
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "squat_go_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "hip",
+      "knee"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "quads": 0.45,
+    "glutes": 0.3,
+    "calves": 0.15,
+    "hamstrings": 0.1
+   },
+   "tips": [
+    "Squat down, then explode up",
+    "Swing the arms for height",
+    "Land softly and sink into the next squat"
+   ],
+   "mistakes": [
+    "Landing on straight legs|Bend the knees as you land",
+    "Knees caving on landing|Push the knees out"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 1.8,
+    "start": {
+     "shin": -4,
+     "thigh": 2,
+     "torso": -2,
+     "head": 0,
+     "upperArm": 40,
+     "forearm": 30,
+     "foot": 140,
+     "lift": 0.16
+    },
+    "end": {
+     "shin": 30,
+     "thigh": -66,
+     "torso": 40,
+     "head": 30,
+     "upperArm": 210,
+     "forearm": 200,
+     "foot": 90,
+     "lift": 0.0
+    }
+   },
+   "cameraTip": "Place the phone side-on about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "lunge",
+   "name": "Lunge",
+   "group": "legs",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "bodyweight"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": false,
+   "focus": [
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 10,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "kneeAngle",
+    "side": "min",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 160,
+    "depth": 100,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "torso_lean",
+     "when": {
+      "torsoLean": {
+       "gt": 30
+      }
+     },
+     "cue": "lunge_chest_up",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "shoulder",
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "knee_past_toe",
+     "when": {
+      "kneePastToe": {
+       "gt": 0.25
+      }
+     },
+     "cue": "lunge_knee_behind_toes",
+     "severity": "moderate",
+     "category": "safety",
+     "phase": "bottom",
+     "joints": [
+      "knee"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "lunge_go_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "knee"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "quads": 0.4,
+    "glutes": 0.35,
+    "hamstrings": 0.15,
+    "calves": 0.05,
+    "abs": 0.05
+   },
+   "tips": [
+    "Take a long step forward",
+    "Drop the back knee straight down",
+    "Keep the front knee over the ankle"
+   ],
+   "mistakes": [
+    "Front knee shooting past the toes|Take a longer step",
+    "Leaning forward|Chest up, shoulders over hips",
+    "Short, shallow steps|Lower until the back knee nearly touches"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.55,
+    "period": 2.6,
+    "groundOn": [
+     "foot_l"
+    ],
+    "plantFeet": {
+     "sides": [
+      "r"
+     ],
+     "z": 0
+    },
+    "start": {
+     "shin": -14,
+     "thigh": -14,
+     "torso": 0,
+     "upperArm": 180,
+     "forearm": 180,
+     "foot": 90,
+     "thigh2": 18,
+     "shin2": 18,
+     "foot2": 120
+    },
+    "end": {
+     "shin": 14,
+     "thigh": -78,
+     "torso": 4,
+     "head": 4,
+     "thigh2": 24,
+     "shin2": 98,
+     "foot2": 160,
+     "upperArm": 180,
+     "forearm": 180,
+     "foot": 90
+    }
+   },
+   "cameraTip": "Place the phone side-on about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "reverse_lunge",
+   "name": "Reverse Lunge",
+   "group": "legs",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "bodyweight"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 10,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "kneeAngle",
+    "side": "min",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 160,
+    "depth": 100,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "torso_lean",
+     "when": {
+      "torsoLean": {
+       "gt": 30
+      }
+     },
+     "cue": "lunge_chest_up",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "shoulder",
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "lunge_go_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "knee"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "glutes": 0.4,
+    "quads": 0.35,
+    "hamstrings": 0.15,
+    "calves": 0.05,
+    "abs": 0.05
+   },
+   "tips": [
+    "Step back with one leg",
+    "Lower until both knees are at 90 degrees",
+    "Push through the front heel to return"
+   ],
+   "mistakes": [
+    "Front knee caving|Keep it over the middle toes",
+    "Short step|Step back far enough for 90 degrees"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.6,
+    "groundOn": [
+     "foot_l"
+    ],
+    "plantFeet": {
+     "sides": [
+      "r"
+     ],
+     "z": 0
+    },
+    "start": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 180,
+     "forearm": 180,
+     "foot": 90
+    },
+    "end": {
+     "shin": 10,
+     "thigh": -82,
+     "torso": 10,
+     "head": 8,
+     "thigh2": 30,
+     "shin2": 100,
+     "foot2": 162,
+     "upperArm": 176,
+     "forearm": 176,
+     "foot": 90
+    }
+   },
+   "cameraTip": "Place the phone side-on about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "side_lunge",
+   "name": "Side Lunge",
+   "group": "legs",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "bodyweight"
+   ],
+   "views": [
+    "front"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 10,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "kneeAngle",
+    "side": "min",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 160,
+    "depth": 105,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "lunge_go_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "knee"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "quads": 0.35,
+    "glutes": 0.35,
+    "hamstrings": 0.1,
+    "calves": 0.05,
+    "obliques": 0.15
+   },
+   "tips": [
+    "Wide stance, step to one side",
+    "Sit back into the bent leg, other leg straight",
+    "Push back to the middle"
+   ],
+   "mistakes": [
+    "Knee caving in|Knee follows the toes",
+    "Rounding the back|Chest up, hips back"
+   ],
+   "keyframes": {
+    "view": "front",
+    "anchorX": 0.5,
+    "period": 2.6,
+    "groundOn": [
+     "foot_r"
+    ],
+    "plantFeet": {
+     "sides": [
+      "l"
+     ],
+     "z": 0
+    },
+    "camYaw": -18,
+    "start": {
+     "torso": 0,
+     "thigh": -26,
+     "shin": -26,
+     "thigh2": -26,
+     "shin2": -26,
+     "upperArm": 168,
+     "forearm": 330,
+     "forearmFwd": 70,
+     "upperArmFwd": 30,
+     "toeOut": 20
+    },
+    "end": {
+     "torso": 8,
+     "torsoFwd": 26,
+     "thigh": -78,
+     "thighFwd": 20,
+     "shin": 4,
+     "thigh2": -38,
+     "shin2": -38,
+     "upperArm": 168,
+     "forearm": 330,
+     "forearmFwd": 70,
+     "upperArmFwd": 30,
+     "toeOut": 20
+    }
+   },
+   "cameraTip": "Place the phone in front of you about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "bulgarian_split_squat",
+   "name": "Bulgarian Split Squat",
+   "group": "legs",
+   "mode": "reps",
+   "level": 3,
+   "equipment": [
+    "bench"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 8,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "kneeAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 160,
+    "depth": 100,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "torso_lean",
+     "when": {
+      "torsoLean": {
+       "gt": 35
+      }
+     },
+     "cue": "lunge_chest_up",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "shoulder",
+      "hip"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "lunge_go_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "knee"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "quads": 0.45,
+    "glutes": 0.35,
+    "hamstrings": 0.1,
+    "calves": 0.05,
+    "abs": 0.05
+   },
+   "tips": [
+    "Rear foot laces-down on the bench",
+    "Lower straight down on the front leg",
+    "Front knee over the ankle"
+   ],
+   "mistakes": [
+    "Front foot too close|Hop the front foot further out",
+    "Leaning too far|Keep the torso tall"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.6,
+    "props": [
+     "bench"
+    ],
+    "benchAt": "rear_foot",
+    "groundOn": [
+     "foot_l"
+    ],
+    "plantFeet": {
+     "sides": [
+      "r"
+     ],
+     "z": 0.42
+    },
+    "start": {
+     "shin": -8,
+     "thigh": -8,
+     "torso": 0,
+     "upperArm": 180,
+     "forearm": 180,
+     "foot": 90,
+     "thigh2": 16,
+     "shin2": 98,
+     "foot2": 255
+    },
+    "end": {
+     "shin": 14,
+     "thigh": -78,
+     "torso": 14,
+     "head": 10,
+     "thigh2": 10,
+     "shin2": 138,
+     "foot2": 245,
+     "upperArm": 180,
+     "forearm": 180,
+     "foot": 90
+    }
+   },
+   "cameraTip": "Place the phone side-on about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "wall_sit",
+   "name": "Wall Sit",
+   "group": "legs",
+   "mode": "timed",
+   "level": 2,
+   "equipment": [
+    "wall"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "isometric",
+   "premium": false,
+   "focus": [
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 0,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "kneeAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 160,
+    "depth": 100
+   },
+   "rules": [
+    {
+     "id": "too_high",
+     "when": {
+      "kneeAngle": {
+       "gt": 115
+      }
+     },
+     "cue": "wallsit_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "any",
+     "joints": [
+      "knee"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "lean",
+     "when": {
+      "torsoLean": {
+       "gt": 20
+      }
+     },
+     "cue": "wallsit_back_flat",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "any",
+     "joints": [
+      "shoulder",
+      "hip"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "quads": 0.65,
+    "glutes": 0.2,
+    "calves": 0.05,
+    "abs": 0.1
+   },
+   "tips": [
+    "Back flat against the wall",
+    "Thighs parallel to the floor",
+    "Knees over ankles"
+   ],
+   "mistakes": [
+    "Sitting too high|Slide down until the thighs are level",
+    "Hands pushing on thighs|Let the arms hang or cross them"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.55,
+    "props": [
+     "wall"
+    ],
+    "start": {
+     "shin": 2,
+     "thigh": -90,
+     "torso": 0,
+     "upperArm": 178,
+     "forearm": 178,
+     "foot": 90
+    },
+    "end": {
+     "shin": 5,
+     "thigh": -55,
+     "torso": -3,
+     "upperArm": 178,
+     "forearm": 178,
+     "foot": 90
+    }
+   },
+   "hold": {
+    "kneeAngle": {
+     "gt": 60,
+     "lt": 130
+    },
+    "torsoLean": {
+     "lt": 30
+    }
+   },
+   "cameraTip": "Place the phone side-on about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "calf_raise",
+   "name": "Calf Raise",
+   "group": "legs",
+   "mode": "reps",
+   "level": 1,
+   "equipment": [
+    "bodyweight"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": false,
+   "focus": [
+    "knee",
+    "ankle",
+    "heel",
+    "toe"
+   ],
+   "region": "legs",
+   "defaults": {
+    "sets": 3,
+    "reps": 20,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "heelRise",
+    "side": "auto",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": 0.03,
+    "complete": 0.015,
+    "depth": 0.11,
+    "hysteresis": 0.01
+   },
+   "rules": [
+    {
+     "id": "knees_bent",
+     "when": {
+      "kneeAngle": {
+       "lt": 150
+      }
+     },
+     "cue": "calf_legs_straight",
+     "severity": "minor",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "knee"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "calf_rise_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "ankle",
+      "heel"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "calves": 0.9,
+    "quads": 0.1
+   },
+   "tips": [
+    "Rise onto the balls of your feet",
+    "Pause at the top",
+    "Lower slowly"
+   ],
+   "mistakes": [
+    "Bouncing|Pause for one second at the top",
+    "Partial range|Lower the heels all the way"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.5,
+    "period": 1.8,
+    "start": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 180,
+     "forearm": 180,
+     "foot": 90
+    },
+    "end": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 180,
+     "forearm": 180,
+     "foot": 132
+    }
+   },
+   "cameraTip": "Place the phone side-on about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "glute_bridge",
+   "name": "Glute Bridge",
+   "group": "glutes",
+   "mode": "reps",
+   "level": 1,
+   "equipment": [
+    "bodyweight",
+    "mat"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": false,
+   "focus": [
+    "shoulder",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 15,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "hipAngle",
+    "side": "auto",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": 140,
+    "complete": 132,
+    "depth": 165,
+    "hysteresis": 5
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "bridge_hips_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "glutes": 0.55,
+    "hamstrings": 0.3,
+    "lower_back": 0.1,
+    "abs": 0.05
+   },
+   "tips": [
+    "Feet flat, close to your glutes",
+    "Squeeze your glutes to lift",
+    "Make a straight line from knees to shoulders"
+   ],
+   "mistakes": [
+    "Hips not fully extended|Squeeze the glutes at the top",
+    "Pushing through the toes|Drive through the heels"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "anchorX": 0.7,
+    "period": 2.4,
+    "props": [
+     "mat"
+    ],
+    "groundOn": [
+     "torso",
+     "neck"
+    ],
+    "plantFeet": {
+     "z": 0
+    },
+    "start": {
+     "shin": -34,
+     "thigh": 222,
+     "torso": 270,
+     "upperArm": 92,
+     "forearm": 92,
+     "foot": 95,
+     "head": 272,
+     "upperArmAbd": 12
+    },
+    "end": {
+     "shin": -8,
+     "thigh": 240,
+     "torso": 238,
+     "upperArm": 94,
+     "forearm": 94,
+     "foot": 95,
+     "head": 262,
+     "upperArmAbd": 12
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "single_leg_bridge",
+   "name": "Single-leg Glute Bridge",
+   "group": "glutes",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "bodyweight",
+    "mat"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 10,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "hipAngle",
+    "side": "min",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": 144,
+    "complete": 138,
+    "depth": 162,
+    "hysteresis": 5
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "bridge_hips_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "glutes": 0.6,
+    "hamstrings": 0.3,
+    "abs": 0.1
+   },
+   "tips": [
+    "One foot planted, the other leg straight",
+    "Lift the hips level",
+    "Squeeze the working glute"
+   ],
+   "mistakes": [
+    "Hips tilting|Keep both hips level",
+    "Arching the back|Lift with the glutes, not the back"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.4,
+    "props": [
+     "mat"
+    ],
+    "groundOn": [
+     "torso",
+     "neck"
+    ],
+    "plantFeet": {
+     "sides": [
+      "l"
+     ],
+     "z": 0
+    },
+    "start": {
+     "shin": -34,
+     "thigh": 222,
+     "torso": 270,
+     "upperArm": 92,
+     "forearm": 92,
+     "foot": 95,
+     "head": 272,
+     "upperArmAbd": 12,
+     "thigh2": 222,
+     "shin2": 222,
+     "foot2": 312
+    },
+    "end": {
+     "shin": -8,
+     "thigh": 240,
+     "torso": 238,
+     "upperArm": 94,
+     "forearm": 94,
+     "foot": 95,
+     "head": 262,
+     "upperArmAbd": 12,
+     "thigh2": 240,
+     "shin2": 240,
+     "foot2": 330
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "hip_thrust",
+   "name": "Hip Thrust",
+   "group": "glutes",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "bench"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "hipAngle",
+    "side": "auto",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": 120,
+    "complete": 112,
+    "depth": 165,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "bridge_hips_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "glutes": 0.6,
+    "hamstrings": 0.25,
+    "quads": 0.1,
+    "abs": 0.05
+   },
+   "tips": [
+    "Upper back on the bench edge",
+    "Drive the hips up until level",
+    "Chin tucked, ribs down"
+   ],
+   "mistakes": [
+    "Overarching the back|Stop when the hips are level",
+    "Feet too far away|Shins vertical at the top"
+   ],
+   "keyframes": {
+    "anchor": "back",
+    "period": 2.4,
+    "props": [
+     "bench"
+    ],
+    "benchAt": "back",
+    "start": {
+     "torso": 300,
+     "head": 330,
+     "thigh": 228,
+     "shin": -6,
+     "foot": 90,
+     "upperArm": 262,
+     "forearm": 262,
+     "upperArmAbd": 30
+    },
+    "end": {
+     "torso": 272,
+     "head": 300,
+     "thigh": 268,
+     "shin": -8,
+     "foot": 90,
+     "upperArm": 262,
+     "forearm": 262,
+     "upperArmAbd": 30
+    }
+   },
+   "cameraTip": "Place the phone side-on about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "donkey_kick",
+   "name": "Donkey Kick",
+   "group": "glutes",
+   "mode": "reps",
+   "level": 1,
+   "equipment": [
+    "bodyweight",
+    "mat"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "hipAngle",
+    "side": "max",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": 100,
+    "complete": 95,
+    "depth": 150,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "kick_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "glutes": 0.7,
+    "hamstrings": 0.2,
+    "abs": 0.1
+   },
+   "tips": [
+    "Hands under shoulders, knees under hips",
+    "Kick the heel up to the ceiling",
+    "Keep the knee bent at 90 degrees"
+   ],
+   "mistakes": [
+    "Arching the lower back|Lift only to hip height",
+    "Rotating the hips|Keep the hips square to the floor"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.0,
+    "props": [
+     "mat"
+    ],
+    "support": {
+     "pivot": "knees",
+     "reach": "hands"
+    },
+    "start": {
+     "torso": 90,
+     "head": 98,
+     "thigh": 0,
+     "shin": 90,
+     "foot": 262,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 176
+    },
+    "end": {
+     "torso": 90,
+     "head": 98,
+     "thigh": 70,
+     "shin": 182,
+     "foot": 268,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 176,
+     "thigh2": 0,
+     "shin2": 90,
+     "foot2": 262
+    }
+   },
+   "cameraTip": "Lay the phone side-on about 1.5-2 m away at floor level, so your whole body fits in view."
+  },
+  {
+   "id": "fire_hydrant",
+   "name": "Fire Hydrant",
+   "group": "glutes",
+   "mode": "reps",
+   "level": 1,
+   "equipment": [
+    "bodyweight",
+    "mat"
+   ],
+   "views": [
+    "front"
+   ],
+   "status": "beta",
+   "type": "bodyweight",
+   "premium": true,
+   "focus": [
+    "hip",
+    "knee",
+    "ankle",
+    "shoulder"
+   ],
+   "region": "floor",
+   "defaults": {
+    "sets": 3,
+    "reps": 12,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "thighAngle",
+    "side": "max",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": 20,
+    "complete": 14,
+    "depth": 55,
+    "hysteresis": 5
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "hydrant_lift_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "knee"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "glutes": 0.75,
+    "obliques": 0.1,
+    "abs": 0.15
+   },
+   "tips": [
+    "Start on all fours",
+    "Lift the bent knee out to the side",
+    "Keep the hips level"
+   ],
+   "mistakes": [
+    "Leaning to the side|Keep weight even on both hands",
+    "Rushing|Pause at the top"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.0,
+    "props": [
+     "mat"
+    ],
+    "camYaw": 150,
+    "support": {
+     "pivot": "knees",
+     "reach": "hands"
+    },
+    "start": {
+     "torso": 90,
+     "head": 98,
+     "thigh": 0,
+     "shin": 90,
+     "foot": 262,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 176
+    },
+    "end": {
+     "torso": 90,
+     "head": 98,
+     "thigh": 0,
+     "shin": 90,
+     "foot": 262,
+     "upperArm": 180,
+     "forearm": 180,
+     "elbow": 176,
+     "thighAbd": 74,
+     "shinAbd": 30,
+     "thighAbd2": 3,
+     "shinAbd2": 1
+    },
+    "start2d": {
+     "torso": 90,
+     "head": 98,
+     "thigh": 0,
+     "shin": 90,
+     "foot": 262,
+     "upperArm": 180,
+     "forearm": 180
+    },
+    "end2d": {
+     "torso": 90,
+     "head": 98,
+     "thigh": 62,
+     "shin": 90,
+     "foot": 262,
+     "upperArm": 180,
+     "forearm": 180,
+     "thigh2": 0
+    }
+   },
+   "cameraTip": "Place the phone behind you at an angle, about 1.5 m away at floor level, whole body in view."
+  },
+  {
+   "id": "romanian_deadlift",
+   "name": "Romanian Deadlift",
+   "group": "glutes",
+   "mode": "reps",
+   "level": 3,
+   "equipment": [
+    "dumbbells"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "strength",
+   "premium": true,
+   "focus": [
+    "shoulder",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 10,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "hipAngle",
+    "side": "auto",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 160,
+    "complete": 168,
+    "depth": 115,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "knees_bent",
+     "when": {
+      "kneeAngle": {
+       "lt": 140
+      }
+     },
+     "cue": "gm_soft_knees_only",
+     "severity": "moderate",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "knee"
+     ],
+     "persistFrames": 4
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "deadlift_hinge_lower",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "hip"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "hamstrings": 0.45,
+    "glutes": 0.35,
+    "lower_back": 0.15,
+    "forearms": 0.05
+   },
+   "tips": [
+    "Soft knees, push the hips back",
+    "Slide the weights down the thighs",
+    "Feel the stretch in the hamstrings"
+   ],
+   "mistakes": [
+    "Rounding the back|Chest proud, shoulders back",
+    "Squatting down|Hinge from the hips, not the knees"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 2.8,
+    "props": [
+     "dumbbells"
+    ],
+    "start": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 178,
+     "forearm": 178,
+     "foot": 90
+    },
+    "end": {
+     "shin": 10,
+     "thigh": -16,
+     "torso": 78,
+     "head": 72,
+     "upperArm": 184,
+     "forearm": 182,
+     "foot": 90
+    }
+   },
+   "cameraTip": "Place the phone side-on about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "jumping_jack",
+   "name": "Jumping Jack",
+   "group": "cardio",
+   "mode": "reps",
+   "level": 1,
+   "equipment": [
+    "bodyweight"
+   ],
+   "views": [
+    "front"
+   ],
+   "status": "beta",
+   "type": "cardio",
+   "premium": false,
+   "focus": [
+    "shoulder",
+    "elbow",
+    "wrist",
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 30,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "shoulderAngle",
+    "side": "auto",
+    "direction": "up"
+   },
+   "thresholds": {
+    "start": 40,
+    "complete": 30,
+    "depth": 140,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "uneven",
+     "when": {
+      "armAsym": {
+       "gt": 25
+      }
+     },
+     "cue": "lateral_even_arms",
+     "severity": "minor",
+     "category": "form",
+     "phase": "moving",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4,
+     "view": "front"
+    },
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "jack_arms_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "elbow"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "calves": 0.3,
+    "shoulders": 0.3,
+    "glutes": 0.2,
+    "quads": 0.2
+   },
+   "tips": [
+    "Jump the feet out as the arms go up",
+    "Land softly on the balls of the feet",
+    "Keep a steady rhythm"
+   ],
+   "mistakes": [
+    "Arms not reaching overhead|Clap the hands overhead",
+    "Landing flat-footed|Stay light on the toes"
+   ],
+   "keyframes": {
+    "view": "front",
+    "anchorX": 0.5,
+    "period": 1.2,
+    "start": {
+     "torso": 0,
+     "upperArm": 172,
+     "forearm": 176,
+     "thigh": -3,
+     "shin": -3
+    },
+    "end": {
+     "torso": 0,
+     "upperArm": 12,
+     "forearm": 6,
+     "thigh": -16,
+     "shin": -16,
+     "lift": 0.06
+    }
+   },
+   "cameraTip": "Place the phone in front of you about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "high_knees",
+   "name": "High Knees",
+   "group": "cardio",
+   "mode": "reps",
+   "level": 2,
+   "equipment": [
+    "bodyweight"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "cardio",
+   "premium": true,
+   "focus": [
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 30,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "hipAngle",
+    "side": "min",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 150,
+    "complete": 158,
+    "depth": 100,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "highknees_knee_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "knee"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "quads": 0.35,
+    "abs": 0.25,
+    "calves": 0.2,
+    "glutes": 0.2
+   },
+   "tips": [
+    "Drive the knees up to hip height",
+    "Pump the arms",
+    "Stay tall on the balls of the feet"
+   ],
+   "mistakes": [
+    "Leaning back|Keep the chest over the hips",
+    "Knees too low|Lift to hip height"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 1.4,
+    "alternate": true,
+    "start": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 168,
+     "forearm": 100,
+     "foot": 90,
+     "upperArm2": 192,
+     "forearm2": 110
+    },
+    "end": {
+     "shin": 4,
+     "thigh": -90,
+     "torso": -4,
+     "upperArm": 210,
+     "forearm": 120,
+     "foot": 120,
+     "thigh2": 0,
+     "shin2": 0,
+     "foot2": 96,
+     "upperArm2": 150,
+     "forearm2": 60,
+     "lift": 0.03
+    }
+   },
+   "cameraTip": "Place the phone side-on about 1.5 m away at hip height, with your whole body in view."
+  },
+  {
+   "id": "butt_kicks",
+   "name": "Butt Kicks",
+   "group": "cardio",
+   "mode": "reps",
+   "level": 1,
+   "equipment": [
+    "bodyweight"
+   ],
+   "views": [
+    "side"
+   ],
+   "status": "beta",
+   "type": "cardio",
+   "premium": true,
+   "focus": [
+    "hip",
+    "knee",
+    "ankle"
+   ],
+   "region": "full",
+   "defaults": {
+    "sets": 3,
+    "reps": 30,
+    "seconds": 30
+   },
+   "metric": {
+    "measure": "kneeAngle",
+    "side": "min",
+    "direction": "down"
+   },
+   "thresholds": {
+    "start": 140,
+    "complete": 150,
+    "depth": 60,
+    "hysteresis": 6
+   },
+   "rules": [
+    {
+     "id": "shallow",
+     "when": {
+      "depthReached": false
+     },
+     "cue": "buttkick_heel_higher",
+     "severity": "moderate",
+     "category": "depth",
+     "phase": "rep_end",
+     "joints": [
+      "knee"
+     ],
+     "persistFrames": 4
+    }
+   ],
+   "muscles": {
+    "hamstrings": 0.4,
+    "calves": 0.3,
+    "quads": 0.2,
+    "glutes": 0.1
+   },
+   "tips": [
+    "Kick the heels up to the glutes",
+    "Stay on the balls of the feet",
+    "Quick, light steps"
+   ],
+   "mistakes": [
+    "Leaning forward|Stand tall",
+    "Heels not reaching|Bend the knees fully"
+   ],
+   "keyframes": {
+    "anchor": "floor",
+    "period": 1.4,
+    "alternate": true,
+    "start": {
+     "shin": 0,
+     "thigh": 0,
+     "torso": 0,
+     "upperArm": 168,
+     "forearm": 100,
+     "foot": 90,
+     "upperArm2": 192,
+     "forearm2": 110
+    },
+    "end": {
+     "shin": 158,
+     "thigh": 8,
+     "torso": 0,
+     "upperArm": 200,
+     "forearm": 120,
+     "foot": 230,
+     "thigh2": 0,
+     "shin2": 0,
+     "foot2": 96,
+     "upperArm2": 160,
+     "forearm2": 70,
+     "lift": 0.03
+    }
+   },
+   "cameraTip": "Place the phone side-on about 1.5 m away at hip height, with your whole body in view."
+  }
+ ],
+ "cues": {
+  "squat_back_straight": "Keep your back straight, chest up",
+  "squat_knees_out": "Push your {side} knee out|Push your knees out",
+  "squat_go_lower": "Go lower, bend your knees more",
+  "lunge_chest_up": "Keep your chest up",
+  "lunge_knee_behind_toes": "Keep your front knee behind your toes",
+  "lunge_go_lower": "Go lower, drop your back knee",
+  "bridge_hips_higher": "Lift your hips higher, squeeze your glutes",
+  "calf_legs_straight": "Keep your legs straight",
+  "calf_rise_higher": "Rise higher onto your toes",
+  "wallsit_lower": "Slide lower, thighs parallel to the floor",
+  "wallsit_back_flat": "Keep your back flat on the wall",
+  "deadlift_bar_close": "Keep the weight close to your legs",
+  "deadlift_hips_up": "Hips higher, this is a hinge not a squat",
+  "deadlift_hinge_lower": "Push your hips back further",
+  "row_hinge_forward": "Hinge forward more",
+  "row_pull_higher": "Pull your elbows further back",
+  "pullup_chin_over_bar": "Pull higher, chin over the bar",
+  "gm_soft_knees_only": "Keep your knees only slightly bent",
+  "gm_hinge_lower": "Hinge lower, push your hips back",
+  "pushup_hips_sag": "Hips sagging, tighten your core",
+  "pushup_hips_high": "Hips too high, lower your hips",
+  "pushup_go_lower": "Go lower, chest towards the floor",
+  "pike_go_lower": "Lower your head closer to the floor",
+  "curl_elbow_tucked": "Keep your {side} elbow tucked at your side|Keep your elbow tucked at your side",
+  "curl_no_swing": "Don't swing your body",
+  "curl_curl_higher": "Curl all the way up",
+  "triceps_ribs_down": "Keep your ribs down, don't arch",
+  "triceps_full_extension": "Straighten your arms fully",
+  "kickback_elbow_up": "Keep your upper arm up and still",
+  "dip_chest_up": "Chest up, stay close to the bench",
+  "dip_go_lower": "Go lower, elbows to 90 degrees",
+  "press_no_lean": "Don't lean back, brace your core",
+  "press_full_lockout": "Press all the way up",
+  "fly_open_wider": "Open your arms wider",
+  "lateral_shoulder_height": "Stop your {side} arm at shoulder height|Stop at shoulder height",
+  "lateral_even_arms": "Raise both arms evenly",
+  "lateral_raise_higher": "Raise your arms to shoulder height",
+  "front_raise_higher": "Raise your arms to shoulder height",
+  "upright_row_higher": "Pull your elbows up to shoulder height",
+  "reverse_fly_wider": "Raise your arms out wider",
+  "superman_lift_higher": "Lift your arms and legs higher",
+  "situp_come_higher": "Come up higher",
+  "crunch_lift_higher": "Lift your shoulders a little higher",
+  "legraise_straight_legs": "Keep your legs straight",
+  "legraise_higher": "Raise your legs higher",
+  "vup_reach_higher": "Reach higher, lift arms and legs together",
+  "deadbug_extend_further": "Extend your arm and leg further",
+  "climber_knee_higher": "Drive your knee closer to your chest",
+  "birddog_extend_further": "Reach your arm and leg out longer",
+  "hollow_legs_up": "Lift your legs a little, keep your back down",
+  "kick_higher": "Kick your heel higher",
+  "hydrant_lift_higher": "Lift your knee higher to the side",
+  "jack_arms_higher": "Bring your arms all the way up",
+  "highknees_knee_higher": "Drive your knees higher",
+  "buttkick_heel_higher": "Kick your heels higher",
+  "plank_get_in_position": "Get into plank position",
+  "plank_hips_sag": "Hips sagging, lift your hips",
+  "plank_hips_high": "Hips too high, lower your hips",
+  "good_form": "Good, that's right",
+  "step_back": "Step back so the camera can see you",
+  "come_closer": "Come a little closer",
+  "get_ready": "Get ready",
+  "set_complete": "Set complete",
+  "last_rep": "Last rep",
+  "rest_start": "Rest now",
+  "next_exercise": "Next exercise",
+  "workout_complete": "Workout complete, great job",
+  "warmup": "Start with a five minute warm-up",
+  "cooldown": "Finish with a gentle stretch to cool down"
+ }
+}
